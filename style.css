@@ -1,0 +1,60 @@
+/* ===== CORES: para mudar o visual, troque só os valores abaixo ===== */
+:root{
+  --fundo:#EFEAE2;
+  --papel:#F8F5F0;
+  --texto:#2E2823;
+  --suave:#5E554B;
+  --argila:#8A5A44;
+  --oliva:#5C6247;
+  --areia:#DDD2C1;
+  --linha:#CBBFAD;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:112.5%;scroll-behavior:smooth}
+body{background:var(--fundo);color:var(--texto);font-family:"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;font-weight:700}
+a{color:var(--argila)}
+a:focus-visible{outline:3px solid var(--oliva);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+
+/* Topo */
+header{background:var(--oliva);color:#F8F5F0;padding:3.5rem 0 3rem}
+header h1{font-size:clamp(1.9rem,5vw,3rem);max-width:18em}
+header p{margin-top:1rem;max-width:36em;font-size:1.1rem}
+.aviso{display:inline-block;margin-top:1.5rem;background:#F8F5F0;color:var(--oliva);padding:.45rem 1rem;border-radius:2rem;font-weight:700}
+
+section{padding:3rem 0}
+section h2{font-size:clamp(1.5rem,4vw,2rem);margin-bottom:.5rem}
+.intro{color:var(--suave);margin-bottom:1.75rem;max-width:38em}
+
+/* Agenda por dia */
+.dia{display:grid;grid-template-columns:9rem 1fr;gap:1rem 2rem;padding:1.5rem 0;border-top:2px solid var(--linha)}
+.dia:last-of-type{border-bottom:2px solid var(--linha)}
+.dia > h3{font-size:1.5rem;color:var(--argila)}
+.aula + .aula{margin-top:1.5rem;padding-top:1.5rem;border-top:1px dashed var(--linha)}
+.aula h4{font-family:Georgia,serif;font-size:1.25rem}
+.aula .quem{color:var(--suave)}
+.hora{display:inline-block;margin:.5rem 0;background:var(--areia);padding:.15rem .75rem;border-radius:.4rem;font-weight:700}
+.contato{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem}
+.contato a{display:inline-block;padding:.6rem 1.1rem;border-radius:.5rem;font-weight:700;text-decoration:none;border:2px solid var(--argila)}
+.contato .zap{background:var(--argila);color:#fff}
+.contato .ligar{background:transparent;color:var(--argila)}
+.contato a:hover{filter:brightness(.92)}
+
+/* Benefícios */
+.beneficios{background:var(--papel);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.tecnicas{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem 2.5rem}
+.tecnicas h3{font-size:1.3rem;color:var(--oliva);margin-bottom:.4rem}
+.tecnicas p{max-width:30em}
+
+/* Como participar */
+.como ol{margin-left:1.4rem;max-width:36em}
+.como li{margin-bottom:.6rem;padding-left:.3rem}
+.local{margin-top:1.5rem;padding:1.2rem 1.4rem;background:var(--areia);border-left:6px solid var(--oliva);max-width:36em}
+
+footer{background:var(--texto);color:#D9D0C3;padding:1.75rem 0;font-size:.95rem}
+
+@media (max-width:640px){
+  .dia{grid-template-columns:1fr;gap:.5rem}
+  header{padding:2.5rem 0 2.25rem}
+}
