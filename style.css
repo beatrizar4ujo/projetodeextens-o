@@ -58,3 +58,13 @@ footer{background:var(--texto);color:#D9D0C3;padding:1.75rem 0;font-size:.95rem}
   .dia{grid-template-columns:1fr;gap:.5rem}
   header{padding:2.5rem 0 2.25rem}
 }
+
+/* Galeria dos trabalhos */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.25rem}
+.galeria figure{margin:0}
+.galeria img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--areia);border:1px solid var(--linha)}
+.galeria figcaption{margin-top:.5rem;color:var(--suave);font-size:.95rem}
+
+/* Endereço da loja */
+.endereco{font-size:1.1rem;line-height:1.5}
+
